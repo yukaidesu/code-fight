@@ -8,10 +8,10 @@ S = [ ["."] * W for _ in range(H)]
 for i in range(Q):
     S[int(rcs[i][0])-1][int(rcs[i][1])-1] = rcs[i][2]
 
-ans = [ "" * W for _ in range(H)]
+ans = [ "" * W for _ in range(H+1)]
 if H == 1 and W == 1:
     print(S[0][0])
 else:
-    for i in range(Q):
+    for i in range(Q+1):
         ans[i] = "".join(S[i])
         print(ans[i])
