@@ -8,10 +8,15 @@ S = [ ["."] * W for _ in range(H)]
 for i in range(Q):
     S[int(rcs[i][0])-1][int(rcs[i][1])-1] = rcs[i][2]
 
-ans = [ "" * W for _ in range(H+1)]
-if H == 1 and W == 1:
-    print(S[0][0])
-else:
-    for i in range(Q+1):
-        ans[i] = "".join(S[i])
-        print(ans[i])
+for j in range(H):
+    print("".join(S[j]))
+
+#これは間違え。答え出るけどエラーなる。配列じゃなくて中身だけ出したいから。
+# ans = [ "" * W for _ in range(H)]
+# if H == 1 and W == 1:
+#     print(S[0][0])
+# else:
+#     for i in range(Q+1):
+#         ans[i] = "".join(S[i])
+#         print(ans[i])
+
