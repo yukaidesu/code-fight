@@ -1,4 +1,5 @@
 # 凸
+# WAは全部NOケースなので、今YESだと思ってるロジックの中に、本当なNOになるケースが混ざってる
 
 n = int(input())
 a = list(map(int, input().split()))
@@ -18,5 +19,6 @@ for i in range(1, n - 1):
         trueans = "YES"
     else:
         trueans = "NO"
+        break #これがないとNOがYESに上書きされてまう
 
 print(trueans)
