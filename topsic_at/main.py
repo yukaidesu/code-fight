@@ -14,10 +14,12 @@ else:
 
 #print(f"合計反対人数{N * G - A}、反対過半数{N - (N // 2 + 1)}")
 #print(f"{(N * G - A) // (N - (N // 2 + 1))}でGが{G}")
-
-if (N * G - A) // (N - (N // 2 + 1)) > G:
-    small = 0
-else:
+if N <= 1:
     small = G - ((N * G - A) // (N // 2 + 1))
+else:
+    if (N * G - A) // (N - (N // 2 + 1)) > G:
+        small = 0
+    else:
+        small = G - ((N * G - A) // (N // 2 + 1))
 
 print(large, small)
