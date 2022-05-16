@@ -17,9 +17,8 @@ for i in range(N):
 
 change = 0
 for i in range(N):
+    #print(f"{S[i]}と{B[i]}")
     if S[i] == B[i]:
         change += 1
 
-change = change // 2
-
-print(calc + change)
+print(calc)
